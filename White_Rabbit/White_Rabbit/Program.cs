@@ -35,8 +35,8 @@ namespace White_Rabbit
 
             var stopwatch = System.Diagnostics.Stopwatch.StartNew(); // timer.start
 
-            int[] Suff = new int[P.Length]; //Массів суффіксов  
-            int[] ValueShift = new int[255]; //Таблица смещений для символов
+            int[] Suff = new int[P.Length]; 
+            int[] ValueShift = new int[255];
 
             //заполненіе массіва суффіксов
 
@@ -56,7 +56,6 @@ namespace White_Rabbit
                     if(Symbol == P[j - 1])
                     {
                         ValueShift[i] = P.Length - j;
-                        //break;
                     }
                 }
             }
@@ -77,7 +76,7 @@ namespace White_Rabbit
             }
 
             //поіск    
-            int k = P.Length - 1; //тек положеніе крайнего правого сімвола із Р
+            int k = P.Length - 1; 
 
             while(k < T.Length - 1)
             {
@@ -89,13 +88,13 @@ Away:
                         break;
                     }
 
-                    if(P[P.Length - i - 1] != T[k - i])//сімвол не совпал
+                    if(P[P.Length - i - 1] != T[k - i])
                     {
 
-                        char temp1 = T[k - i];//несовпавшій сімвол
-                        int temp2 = (Int32)temp1;//код несовпавшего сімвола
-                        int temp3 = ValueShift[temp2];//дліна сдвіга для несовпавшего сімвола согласно правилу плохого символа
-                        int si = Suff[i];   //дліна сдвіга для несовпавшего сімвола согласно правилу хорошего суффикса
+                        char temp1 = T[k - i];
+                        int temp2 = (Int32)temp1;
+                        int temp3 = ValueShift[temp2];
+                        int si = Suff[i];
 
                         if(si > temp3)
                         {
@@ -105,12 +104,12 @@ Away:
                         else if(si <= temp3)
                         {
 
-                            k += temp3;//+ 1;  //проверяю этот инкремент  
+                            k += temp3;
 
                         }
                         goto Away;
                     }
-                    else if(P[P.Length - i - 1] == T[k - i])//сімвол совпал
+                    else if(P[P.Length - i - 1] == T[k - i])
                     {
                         if(i != 0 && k > 0) { }
                         {
@@ -124,8 +123,6 @@ Away:
                     }
                 }
             }
-            //search           
-
 
             Console.WriteLine( "совпадение не найдено" );
 Found:
