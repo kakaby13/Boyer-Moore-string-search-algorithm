@@ -76,12 +76,12 @@ namespace White_Rabbit
             }
 
             //поіск    
-            int k = P.Length - 1; 
+            int k = P.Length - 1;
+            bool found = false;
 
             while(k < T.Length - 1)
             {
-Away:
-                for(int i = 0; k >= T.Length - 1 || i <= P.Length - 1; i++)
+                for(int i = 0; i <= P.Length - 1; i++)
                 {
                     if(k >= T.Length - 1)
                     {
@@ -107,7 +107,7 @@ Away:
                             k += temp3;
 
                         }
-                        goto Away;
+                        //continue;
                     }
                     else if(P[P.Length - i - 1] == T[k - i])
                     {
@@ -118,14 +118,20 @@ Away:
                         {
                             FirtIncludeSymbol = k;
                             Console.WriteLine( "совпадение найдено - " + FirtIncludeSymbol );
-                            goto Found;
+                            found = true;
+                            break;
                         }
                     }
                 }
+                if(found == true)
+                {
+                    break;
+                }
             }
-
-            Console.WriteLine( "совпадение не найдено" );
-Found:
+            if(found == false)
+            {
+                Console.WriteLine( "совпадение не найдено" );
+            }
             stopwatch.Stop();
             Console.WriteLine( stopwatch.Elapsed );
 
