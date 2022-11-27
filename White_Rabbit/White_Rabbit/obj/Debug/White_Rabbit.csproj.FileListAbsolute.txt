@@ -1,6 +1,0 @@
-c:\users\vlad\documents\visual studio 2013\Projects\White_Rabbit\White_Rabbit\bin\Debug\White_Rabbit.exe.config
-c:\users\vlad\documents\visual studio 2013\Projects\White_Rabbit\White_Rabbit\bin\Debug\White_Rabbit.exe
-c:\users\vlad\documents\visual studio 2013\Projects\White_Rabbit\White_Rabbit\bin\Debug\White_Rabbit.pdb
-c:\users\vlad\documents\visual studio 2013\Projects\White_Rabbit\White_Rabbit\obj\Debug\White_Rabbit.csprojResolveAssemblyReference.cache
-c:\users\vlad\documents\visual studio 2013\Projects\White_Rabbit\White_Rabbit\obj\Debug\White_Rabbit.exe
-c:\users\vlad\documents\visual studio 2013\Projects\White_Rabbit\White_Rabbit\obj\Debug\White_Rabbit.pdb
